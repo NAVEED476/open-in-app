@@ -1,0 +1,17 @@
+.db-cont{
+    display: flex;
+}
+
+
+
+.sideBar{
+    width: 218px;
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+}
+
+.db-right {
+    width: calc(100% - 200px); /* Added whitespace around the minus sign */
+    height: 100vh;
+}

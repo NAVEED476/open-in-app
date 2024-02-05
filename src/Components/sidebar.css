@@ -1,0 +1,47 @@
+.base-logo {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.base-logo h1 {
+}
+
+.icons-div li {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  list-style: none;
+  height: 30px;
+  color: #9a9aa9;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.icons-div{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    margin: 30px;
+    cursor: pointer;
+    padding:2px 5px;
+
+}
+
+.icons-div:hover {
+    background-color: #e0e0e0;
+    height: 35px;
+    border-radius: 8px;
+}
+.icons-div li {
+    list-style: none; 
+}
