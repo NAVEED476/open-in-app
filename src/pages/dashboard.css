@@ -1,17 +1,50 @@
-.db-cont{
-    display: flex;
+.db-cont {
+  display: flex;
 }
 
-
-
-.sideBar{
-    width: 218px;
-    height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-
+.sideBar {
+  width: 218px;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
 .db-right {
-    width: calc(100% - 200px); /* Added whitespace around the minus sign */
-    height: 100vh;
+  width: calc(100% - 200px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+.upload-box {
+  width: 596px;
+  height: 367px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upload-box p {
+  font-family: Figtree;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  
+}
+
+.upload-box button{
+    width: 90%;
+    margin-top: 100px;
+    background:#605BFF ;
+    color: #FFFFFF;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border-radius: 8px;
+}
+
