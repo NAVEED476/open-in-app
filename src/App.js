@@ -1,5 +1,6 @@
 import Login from "./Components/Login";
-import Dashboard from "./pages/Dashboard";
+import Signup from "./Components/Signup";
+import UploadCSV from "./pages/UploadCSV";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,15 +15,19 @@ export default function App() {
       element: <Login />,
     },
     {
-      path: "/dashboard",
-      element: <Dashboard />,
+      path:"/signup",
+      element:<Signup/>
+    },
+    {
+      path: "/upload",
+      element: <UploadCSV />,
     },
   ]);
   return (
     <>
       <RouterProvider router={router}>
         <Login />
-        <Dashboard />
+        <UploadCSV />
       </RouterProvider>
     </>
   );

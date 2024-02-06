@@ -37,19 +37,18 @@
 }
 
 .db-right::-webkit-scrollbar {
-  width: 2px; 
+  width: 2px;
 }
 
 .db-right::-webkit-scrollbar-track {
-  background: #ffffff; 
-  border-radius: 8px; 
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 .db-right::-webkit-scrollbar-thumb {
   background: #ffffff;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
-
 
 .upload-box {
   width: 596px;
@@ -139,12 +138,12 @@ h2 {
 .table-box h2 {
   margin: 10px 0px 10px 10px;
 }
-option{
+option {
   width: 100px;
 }
 .chips {
   width: 400px;
-  overflow: auto; 
+  overflow: auto;
   display: flex;
 }
 .chips::-webkit-scrollbar {
@@ -152,20 +151,18 @@ option{
 }
 
 .chips::-webkit-scrollbar-track {
-  background: white; 
+  background: white;
 }
 
 /* Handle */
 .chips::-webkit-scrollbar-thumb {
-  background: white; 
-  border-radius: 10px; 
+  background: white;
+  border-radius: 10px;
 }
-
 
 .chips::-webkit-scrollbar-thumb:hover {
   background: white;
 }
-
 
 @media only screen and (max-width: 600px) {
   .db-cont {
@@ -182,24 +179,27 @@ option{
     overflow-y: scroll;
     scrollbar-width: thin;
     margin: 10px;
-}
-.upload-box {
-  width: 340px;
-  height: 367px;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.table-box {
-  margin-top: 40px;
-  background: #f5f5f5;
-  padding: 10px;
-  width: 365px;
-  overflow: scroll;
-  border-radius: 16px;
-}
+  }
+  .upload-box {
+    width: 340px;
+    height: 367px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .table-box {
+    margin-top: 40px;
+    background: #f5f5f5;
+    padding: 10px;
+    width: 365px;
+    overflow: scroll;
+    border-radius: 16px;
+  }
+  .sideBar {
+    display: none;
+  }
 }

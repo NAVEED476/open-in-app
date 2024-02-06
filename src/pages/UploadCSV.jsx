@@ -4,9 +4,8 @@ import SideBar from "../Components/SideBar";
 import Navbar from "../Components/Navbar";
 import docs from "./Docs.svg";
 import Papa from "papaparse";
-import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const UploadCSV = () => {
   const [jsonData, setJsonData] = useState(null);
   const [tableState, setTableState] = useState(false);
   const [selectedTagsMap, setSelectedTagsMap] = useState({});
@@ -188,4 +187,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default UploadCSV;
