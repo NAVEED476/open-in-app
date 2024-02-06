@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./dashboard.css";
 import SideBar from "../Components/SideBar";
 import Navbar from "../Components/Navbar";
-import docs from "./Docs.svg";
 import Papa from "papaparse";
 
 const UploadCSV = () => {
@@ -51,8 +50,8 @@ const UploadCSV = () => {
 
         <div className="table-cont">
           <div className="upload-box">
-            <docs style={{ width: "30px", height: "30px" }} />
-            <img src={docs} alt="csv file" />
+            {/* <docs style={{ width: "30px", height: "30px" }} /> */}
+           
             <p>
               Drop your excel sheet here or{" "}
               <span style={{ color: "#605BFF" }}>
