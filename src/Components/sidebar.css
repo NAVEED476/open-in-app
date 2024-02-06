@@ -24,7 +24,7 @@
   height: 30px;
   color: #9a9aa9;
   margin-left: 10px;
-  margin-bottom: 5px;
+  margin-top: 4px;
 }
 
 .icons-div{
@@ -44,4 +44,66 @@
 }
 .icons-div li {
     list-style: none; 
+}
+
+.base-logo h1 {
+  font-size: 24px;
+  color: #333;
+  margin-left: 10px;
+}
+
+.db-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.icons-div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icons-div:hover {
+  background-color: #f0f0f0;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger-icon {
+  fill: #333;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-icon.active {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 600px) {
+  .db-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99;
+    padding-top: 60px; /* Adjust this value according to your header height */
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .db-list.show {
+    display: block;
+    transform: translateX(0);
+  }
+
+  .icons-div {
+    padding: 10px 20px;
+  }
 }

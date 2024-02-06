@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin: 30px;
+    margin: 10px;
 }
 
 .social-icons img{
@@ -137,4 +137,98 @@
   font-weight: 700;
   text-align: center;
   color: #ffffff;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .login-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-cont {
+    width: 100%;
+    height: 30vh;
+    background: #605bff;
+  }
+
+  .right-cont {
+    background: #f8faff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .signIn-box {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .login-btns { 
+    flex-direction: column;
+  }
+  .login-btns button {
+    background: hwb(240 72% 24%);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 8px;
+  }
+  .login-form {
+    height: 347.99px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 15px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 10px;
+    text-align: left;
+  }
+  .login-form input {
+    border-radius: 10px;
+    text-indent: 10px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    width:328px;
+    height: 43.91px;
+    background: #eaeaea;
+  }
+  .login-form button {
+    width: 328px;
+    height: 43.91px;
+    border-radius: 10px;
+    background: #605bff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+  }
+  .left-cont {
+    
+  }
+  .website-logo h1 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: black;
+    margin-right: 130px;
+}
+.website-logo {
+  background: #605bff;
+  height: 80%;
+  width: 100%;
+}
 }

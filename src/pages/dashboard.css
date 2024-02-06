@@ -8,13 +8,49 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
+.nav-cont {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.table-cont {
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .db-right {
   width: calc(100% - 200px);
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
+
+.db-right::-webkit-scrollbar {
+  width: 2px; 
+}
+
+.db-right::-webkit-scrollbar-track {
+  background: #ffffff; 
+  border-radius: 8px; 
+}
+
+.db-right::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 8px; 
+}
+
+
 .upload-box {
   width: 596px;
   height: 367px;
@@ -32,19 +68,138 @@
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  
 }
 
-.upload-box button{
-    width: 90%;
-    margin-top: 100px;
-    background:#605BFF ;
-    color: #FFFFFF;
-    font-size: 16px;
+.upload-box button {
+  width: 90%;
+  margin-top: 80px;
+  height: 35px;
+  background: #605bff;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 8px;
+}
+
+th {
+  font-size: 16px;
+}
+
+td {
+  font-family: Figtree;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  height: 58px;
+}
+tr {
+  margin: 5px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+th,
+td {
+  width: 150px;
+  text-align: center;
+  padding: 5px;
+  background: #ffffff;
+}
+
+h2 {
+  color: #4287f5;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.table tbody tr {
+  margin-bottom: 5px;
+}
+
+.table tbody tr:last-child {
+  margin-bottom: 0;
+}
+
+.table-box {
+  margin-top: 40px;
+  background: #f5f5f5;
+  padding: 10px;
+  width: 1065px;
+  border-radius: 16px;
+}
+
+.table-box h2 {
+  margin: 10px 0px 10px 10px;
+}
+option{
+  width: 100px;
+}
+.chips {
+  width: 400px;
+  overflow: auto; 
+  display: flex;
+}
+.chips::-webkit-scrollbar {
+  width: 1px !important;
+}
+
+.chips::-webkit-scrollbar-track {
+  background: white; 
+}
+
+/* Handle */
+.chips::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px; 
+}
+
+
+.chips::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .db-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .db-right {
+    width: 365px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 14px;
-    border-radius: 8px;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    margin: 10px;
 }
-
+.upload-box {
+  width: 340px;
+  height: 367px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.table-box {
+  margin-top: 40px;
+  background: #f5f5f5;
+  padding: 10px;
+  width: 365px;
+  overflow: scroll;
+  border-radius: 16px;
+}
+}
