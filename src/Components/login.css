@@ -90,10 +90,17 @@
   display: flex;
   gap: 30px;
 }
+.applebutton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8faff !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 .login-btns button {
   width: 197.6px;
   height: 32.93px;
-  background: hwb(240 72% 24%);
+  /* background: hwb(240 72% 24%); */
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 400;

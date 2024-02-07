@@ -77,7 +77,7 @@ const Login = () => {
                   width: "50p",
                   height: "50px",
                   margin: "0px 0px 0px 10px",
-                  borderRadius:"16px"
+                  borderRadius:"30px"
                 }}
               />
             </div>
@@ -127,7 +127,7 @@ const Login = () => {
                   }}
                 />
               </button>
-              <button>Sign in with Apple</button>
+              <button className="applebutton"> <img style={{width:"45px"}} src="https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png" alt="" /><span>Sign in with Apple</span></button>
             </div>
 
             <div className="login-form">
