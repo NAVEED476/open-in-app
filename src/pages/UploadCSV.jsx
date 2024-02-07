@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./dashboard.css";
 import SideBar from "../Components/SideBar";
 import Navbar from "../Components/Navbar";
 import Papa from "papaparse";
+import Docs from "../assets/Docs.svg";
 
 const UploadCSV = () => {
   const [jsonData, setJsonData] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [tableState, setTableState] = useState(false);
   const [selectedTagsMap, setSelectedTagsMap] = useState({});
+  const fileInputRef = useRef(null);
 
   const handleTagSelection = (itemId, selectedTag) => {
     setSelectedTagsMap((prevState) => ({
@@ -23,19 +27,30 @@ const UploadCSV = () => {
     }));
   };
 
-  const handleCSVInputChange = (event) => {
+  function handleCSVInputChange(event) {
     const file = event.target.files[0];
-
+    setSelectedFile(file);
+    setIsLoading(true);
     Papa.parse(file, {
       header: true,
       complete: (result) => {
         setJsonData(result.data);
         setTableState(true);
+        setIsLoading(false);
       },
       error: (error) => {
         console.error("CSV parsing error:", error);
+        setIsLoading(false);
       },
     });
+  }
+
+  const handleRemoveFile = () => {
+    setSelectedFile(null);
+    window.location.reload();
+  };
+  const handleButtonClick = () => {
+    fileInputRef.current.click();
   };
 
   return (
@@ -51,14 +66,17 @@ const UploadCSV = () => {
         <div className="table-cont">
           <div className="upload-box">
             {/* <docs style={{ width: "30px", height: "30px" }} /> */}
-           
+            <img src={Docs} alt="csv file" />
             <p>
               Drop your excel sheet here or{" "}
               <span style={{ color: "#605BFF" }}>
                 <input
+                  ref={fileInputRef}
                   style={{
                     cursor: "pointer",
                     margin: "10px 0px 0px 0px",
+                    outline: "none",
+                    border: "none",
                   }}
                   name="Browse"
                   type="file"
@@ -66,8 +84,17 @@ const UploadCSV = () => {
                   onChange={handleCSVInputChange}
                 />
               </span>
+              {isLoading ? (
+                <div>Loading...</div>
+              ) : selectedFile ? (
+                <div>
+                  <p style={{ color: "red" }} onClick={handleRemoveFile}>
+                    Remove
+                  </p>
+                </div>
+              ) : null}
             </p>
-            <button>
+            <button onClick={handleButtonClick}>
               {" "}
               <svg
                 fill="currentColor"
@@ -137,15 +164,15 @@ const UploadCSV = () => {
                             </select>
                           </div>
                         </td>
-                        <td style={{
-                          width:"400px",
-                          
-                        }}>
+                        <td
+                          style={{
+                            width: "400px",
+                          }}
+                        >
                           <div className="chips">
                             {selectedTagsMap[item.id] &&
                               selectedTagsMap[item.id].map((tag, index) => (
-                              
-                                  <span
+                                <span
                                   key={index}
                                   style={{
                                     marginRight: "10px",
@@ -154,8 +181,7 @@ const UploadCSV = () => {
                                     background: "#5B93FF",
                                     color: "#FFFFFF",
                                     borderRadius: "4px",
-                                    display:"flex"
-                                   
+                                    display: "flex",
                                   }}
                                 >
                                   {tag}
@@ -170,7 +196,6 @@ const UploadCSV = () => {
                                     X
                                   </button>
                                 </span>
-                                
                               ))}
                           </div>
                         </td>
@@ -179,7 +204,7 @@ const UploadCSV = () => {
                 </tbody>
               </table>
             </div>
-           )} 
+          )}
         </div>
       </div>
     </div>
