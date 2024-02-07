@@ -12,8 +12,7 @@
   border-radius: 50%;
 }
 
-.base-logo h1 {
-}
+
 
 .icons-div li {
   font-family: Nunito;
@@ -44,6 +43,8 @@
 }
 .icons-div li {
     list-style: none; 
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .base-logo h1 {

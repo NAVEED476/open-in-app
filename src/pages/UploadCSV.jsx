@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./dashboard.css";
+import "./uploadCSV.css";
 import SideBar from "../Components/SideBar";
 import Navbar from "../Components/Navbar";
 import Papa from "papaparse";
